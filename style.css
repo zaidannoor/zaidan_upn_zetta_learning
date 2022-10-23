@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: lightgray;
+}
+
+header{
+    padding: 10px;
+    text-align: center;
+    border: 4px solid salmon;
+}
+
+.card-container{
+    display: grid;
+    width: 85%;
+    margin: 30px auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card{
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .5);
+    border: 3px solid red;
+    margin: 20px;
+}
+
+.card > img{
+    
+}
+
+.card-body{
+    padding: 10px;
+}
+
