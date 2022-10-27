@@ -15,17 +15,16 @@ function BookPurchasing({name,price,category,stock},discount,tax,amount) {
         };
     }
     console.log(`Total Harga = ${totalPrice}`)
-    return {
-        name: name,
-        price: price,
-        category: category,
-        amountOfDiscount: amountOfDiscount,
-        priceAfterDiscount: priceAfterDiscount,
-        amountOfTax: amountOfTax,
-        priceAfterTax: priceAfterTax,
-        purchased: amount,
-        totalPrice: totalPrice
-    };
+    return totalPrice;
+}
+
+function termOfCredit(total, term) {
+    priceperterm = total / term;
+    objectofterm = [];
+    for (let index = 0; index < term; index++) {
+      objectofterm.push({ index: index + 1, term: priceperterm });
+    }
+    return objectofterm;
 }
         
 const book = {
@@ -35,4 +34,4 @@ const book = {
     "stock": 5
 }
 
-console.log(BookPurchasing(book,10,10,3))
+console.log(termOfCredit(BookPurchasing(book, 10, 10, 3), 5));
