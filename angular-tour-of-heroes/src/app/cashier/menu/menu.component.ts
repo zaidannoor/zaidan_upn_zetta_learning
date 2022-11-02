@@ -1,11 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent implements OnInit {
+  
   public items : {title : string; price : number }[] = [
     {
       title: "Coffe Latte",
@@ -31,11 +33,24 @@ export class MenuComponent implements OnInit {
       title: "Cappucino Cincau",
       price: 12000
     },
-  ]
+  ];
 
-  onClick(){
-    
+
+  // public currentMsgToSibling : string = 'Boerhan';
+  // @Output() msgToSibling = new EventEmitter<any>();
+  // msgToSib() { 
+  //   this.msgToSibling.emit(this.currentMsgToSibling)
+  // }
+
+  public data : {title : string; price : number }[] = [];
+
+  @Output() sendData = new EventEmitter<any>();
+
+  addToPayment(item: any){
+    this.data.push(item)
+    this.sendData.emit(this.data)
   }
+
   constructor() { }
 
   ngOnInit(): void {
