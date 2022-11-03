@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Hello From Angular';
+  title = 'Cashier Application';
   dataPayment: { title: string; price: number; }[] = [];
   
   receiveMenu($event : any) { 
