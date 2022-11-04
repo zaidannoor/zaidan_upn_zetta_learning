@@ -15,3 +15,7 @@ h2{
 .payment-title{
     flex: 1;
 }
+
+.payment-price{
+    flex: 1;
+}

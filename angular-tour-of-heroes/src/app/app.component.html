@@ -1,10 +1,7 @@
 <h1>{{title}}</h1>
 <main >
    <app-menu (sendData)="receiveMenu($event)"></app-menu>
-   <app-payment [payments]="dataPayment"></app-payment> 
-   <!-- <app-menu (msgToSibling)="fwdMsgToSib2($event)"></app-menu> -->
-    
-    <!-- <app-payment [message]="currentMsgFromChild1ToChild2"></app-payment>  -->
+   <app-payment [payments]="dataPayment"></app-payment>     
 </main>
 
 
