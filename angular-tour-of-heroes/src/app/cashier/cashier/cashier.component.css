@@ -1,0 +1,11 @@
+.cashier{
+    display: flex;
+}
+
+.menu{
+    flex: 3;
+}
+
+aside{
+    flex: 2;
+}
