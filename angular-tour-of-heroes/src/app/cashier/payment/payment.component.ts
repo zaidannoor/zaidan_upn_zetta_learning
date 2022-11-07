@@ -4,7 +4,9 @@ import { Selecteditem } from '../cashier/cashier.component';
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
-  styleUrls: ['./payment.component.css']
+  styleUrls: ['./payment.component.css'],
+  styles : ['[bgAqua]{  Background-color: aliceblue;}',
+        '[bgGreen]{background-color: #05fa46;}']
 })
 export class PaymentComponent implements OnInit {
   @Input() items!: Selecteditem[];
