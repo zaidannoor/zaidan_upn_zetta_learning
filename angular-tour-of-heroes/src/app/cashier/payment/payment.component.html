@@ -1,6 +1,32 @@
 <h2>Payment</h2>
-<!-- <div class="payment-list" *ngFor="let payment of payments">
-    <span class="payment-title">{{ payment.amount }}x {{ payment.title }}</span>
-    <span class="payment-price">Rp {{ payment.amount * payment.price }}</span>
-    <button (click)="removeItem(payment)">Remove</button>
-</div> -->
+<div class="payment-list" *ngFor="let item of items">
+    <span class="payment-title">{{ item.amount }}x {{ item.name }}</span>
+    <span class="payment-price">Rp {{ item.amount * item.price }}</span>
+    <button (click)="removeItem(item)">Remove</button>
+</div>
+
+    <ng-template *ngIf="items.length >0 then totalPayment; else noItem"></ng-template>
+    <ng-template #totalPayment >
+        <span class="total" bgGreen> Total : Rp.{{total}}</span>
+    </ng-template>
+    <ng-template #noItem >
+        <p class="noItem">No Item Selected</p>
+    </ng-template>
+
+<!-- <table #bgAqua>
+    <tr *ngFor = "let item of items">
+        <td><span>{{ item.amount }} x {{item.name}}</span></td>
+        <td><span>Rp. {{item.price}}</span> </td>
+        <td> <button type="button" class="btn btn-outline-danger" (click)="removeItem(item)"> Remove</button></td>
+    </tr>
+
+    <tr class="tot" >
+        <ng-template *ngIf="items.length >0 then totalPayment; else noItem"></ng-template>
+        <ng-template #totalPayment>
+            <td colspan="3" bgGreen > Total : Rp.{{total}}</td>
+        </ng-template>
+        <ng-template #noItem  >
+            <td > No Item Selected</td>
+        </ng-template>
+    </tr>
+</table> -->

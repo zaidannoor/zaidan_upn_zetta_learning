@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+
+h2{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.payment-list{
+    display: flex;
+    padding: 8px;
+}
+
+.payment-title{
+    flex: 1;
+}
+
+.payment-price{
+    flex: 1;
+}
+
+.total{
+    display: block;
+    margin-top: 15px;
+    padding: 8px;
+}
+
+.noItem{
+    text-align: center;
+    padding-top: 20px;
+}
