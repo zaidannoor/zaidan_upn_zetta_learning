@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import { item } from '../cashier/cashier.component';
 
 @Component({
@@ -9,10 +9,13 @@ import { item } from '../cashier/cashier.component';
 export class MenuComponent implements OnInit {
   @Input('items') items: item[]=[]
   @Output ('itemAdded') onAddItem : EventEmitter<item> = new EventEmitter<item>()
-
+  @ViewChild('bgaq') bgaq?:ElementRef;
+  @ViewChild('al') bgRed?:ElementRef;
   constructor() { }
 
   ngOnInit(): void {
+    this.bgaq?.nativeElement.setAttribute('bgaq', '');
+    this.bgRed?.nativeElement.setAttribute('coba', '');
   }
 
   addItem(item :item) : void{

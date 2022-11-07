@@ -2,7 +2,7 @@
 <div class="menu-list">
     <div class="card" *ngFor="let item of items" (click)="onAddItem.emit(item)">
         <div class="card-img">
-            <!-- <img src="{{ item.img }}" alt="menu"> -->
+            <img src="{{ item.img }}" alt="menu">
         </div>
         <div class="card-body">
             <h4>{{ item.name }}</h4>
