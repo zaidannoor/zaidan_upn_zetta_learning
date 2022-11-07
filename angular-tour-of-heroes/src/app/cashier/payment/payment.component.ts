@@ -9,9 +9,9 @@ export class PaymentComponent implements OnInit {
   @Input() public payments: any;
 
 
-  
+
   removeItem(itemToBeRemoved: any){
-    const itemIndex = this.payments.findIndex((payment: any) => payment.id ===itemToBeRemoved.id)
+    const itemIndex = this.payments.findIndex((payment: any) => payment.id === itemToBeRemoved.id)
   
     if(this.payments[itemIndex].amount>1){
       this.payments[itemIndex].amount-=1
