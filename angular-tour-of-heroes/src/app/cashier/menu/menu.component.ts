@@ -20,11 +20,6 @@ export class MenuComponent implements OnInit {
   constructor(private cashierservice: CashierService) {
     
     this.items = this.cashierservice.items$;
-    this.items.subscribe(console.log);
-    console.log(this.items)
-    console.log(this.cashierservice.items$)
-    console.log('tes')
-
   }
 
   ngOnInit(): void {

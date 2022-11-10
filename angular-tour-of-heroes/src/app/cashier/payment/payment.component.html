@@ -1,6 +1,6 @@
 <h2>Payment</h2>
-<div class="payment-list" *ngFor="let payment of payments">
-    <span class="payment-title">{{ payment.amount }}x {{ payment.title }}</span>
-    <span class="payment-price">Rp {{ payment.amount * payment.price }}</span>
-    <button (click)="removeItem(payment)">Remove</button>
+<div class="payment-list" *ngFor="let item of items | async">
+    <span class="payment-title">{{ item.amount }}x {{ item.title }}</span>
+    <span class="payment-price">Rp {{ item.amount * item.price }}</span>
+    <button (click)="removeItem(item)">Remove</button>
 </div>
