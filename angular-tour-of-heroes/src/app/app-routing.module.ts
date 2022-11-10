@@ -6,6 +6,10 @@ const routes: Routes = [
     path :'cashier',
     loadChildren:()=>import('./cashier/cashier.module').then(m=> m.CashierModule),
   },
+  {
+    path :'detail',
+    loadChildren:()=>import('./detail/detail.module').then(m=> m.DetailModule),
+  },
 
 ];
 

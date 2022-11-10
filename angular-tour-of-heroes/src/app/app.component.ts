@@ -10,7 +10,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   ]
 })
 export class AppComponent {
-  title = 'Angular Day 4';
+  title = 'Angular Day 6';
 
   @ViewChild('el') bgGreen?:ElementRef;
   @ViewChild('al') bgRed?:ElementRef;
