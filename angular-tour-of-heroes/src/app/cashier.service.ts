@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-export interface Items {
+export interface Item {
   id: number;
   title: string;
   img: string;
@@ -17,8 +17,9 @@ export interface SelectedItems {
 @Injectable({
   providedIn: 'root'
 })
+
 export class CashierService {
-  private items : BehaviorSubject<Items[]> = new BehaviorSubject<Items[]>([
+  private items : BehaviorSubject<Item[]> = new BehaviorSubject<Item[]>([
     {
       id: 1,
       title: "Coffe Latte",
@@ -61,12 +62,17 @@ export class CashierService {
   private selectedItemSource: BehaviorSubject<SelectedItems[]> = new BehaviorSubject<SelectedItems[]>([]);
     
   public items$ = this.items.asObservable();
+  
   public selectedItems$ = this.selectedItemSource.asObservable();
 
 
-  constructor() { }
+  constructor() {
+    console.log(this.items.asObservable())
+    console.log(this.items$)
 
-  additem(item: Items) {
+   }
+
+  additem(item: Item) {
     const selectedItem = this.selectedItemSource.value;
     const duplicatedItemIndex = selectedItem.findIndex(
       ({ id }) => id === item.id
@@ -106,5 +112,5 @@ export class CashierService {
       ]);
     }
   }
-  
+
 }

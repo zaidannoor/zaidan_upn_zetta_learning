@@ -1,6 +1,6 @@
 <h2>Menu</h2>
 <div class="menu-list">
-    <div class="card" *ngFor="let item of items" (click)="addToPayment(item)">
+    <div class="card" *ngFor="let item of items | async" (click)="addToPayment(item)">
         <div class="card-img">
             <img src="{{ item.img }}" alt="menu">
         </div>
