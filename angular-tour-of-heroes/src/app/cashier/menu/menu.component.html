@@ -1,12 +1,16 @@
 <h2>Menu</h2>
 <div class="menu-list">
-    <div class="card" *ngFor="let item of items" (click)="onAddItem.emit(item)">
+    <div class="card" *ngFor="let item of items">
         <div class="card-img">
             <img src="{{ item.img }}" alt="menu">
         </div>
         <div class="card-body">
             <h4>{{ item.name }}</h4>
             <p>{{ item.price }}</p>   
+        </div>
+        <div class="card-button">
+            <button class="button-detail">Detail item</button>
+            <button class="button-payment" (click)="onAddItem.emit(item)">Add to payment</button>
         </div>
     </div>
 </div>
