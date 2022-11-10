@@ -4,3 +4,9 @@
     <span class="payment-price">Rp {{ item.amount * item.price }}</span>
     <button (click)="removeItem(item)">Remove</button>
 </div>
+
+<ng-template
+  *ngIf="(items | async)?.length; then totalpayment; else noitem"
+></ng-template>
+<ng-template #totalpayment><p class="total">Total Rp {{ total | async }}</p> </ng-template>
+<ng-template #noitem><p class="total">No selected item</p></ng-template>

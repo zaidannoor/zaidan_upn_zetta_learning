@@ -31,6 +31,7 @@ export class PaymentComponent implements OnInit {
         items.reduce((total, item) => (total += item.amount * item.price), 0)
       )
     );
+    console.log(this.total)
   }
 
   removeItem(item: SelectedItems) {
