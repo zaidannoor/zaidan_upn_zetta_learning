@@ -49,10 +49,15 @@ export class CashierComponent implements OnInit {
   ]
 
   public selectedItems : Selecteditem[]=[]
+  
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getItemById(id : number){
+    return this.items.find((item) => item.id === id)
   }
 
   addItem(item :item){
