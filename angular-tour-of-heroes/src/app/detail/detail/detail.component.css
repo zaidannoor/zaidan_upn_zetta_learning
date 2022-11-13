@@ -1,0 +1,15 @@
+.detail-item{
+    display: flex;
+    background-color: lightgray;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+img{
+    max-width: 300px;
+    border-radius: 10px 0 0 10px;
+}
+
+.item-body{
+    margin-left: 12px;
+}
