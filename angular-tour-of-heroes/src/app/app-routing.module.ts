@@ -7,7 +7,7 @@ const routes: Routes = [
     loadChildren:()=>import('./cashier/cashier.module').then(m=> m.CashierModule),
   },
   {
-    path :'detail',
+    path :'detail/:id',
     loadChildren:()=>import('./detail/detail.module').then(m=> m.DetailModule),
   },
 
