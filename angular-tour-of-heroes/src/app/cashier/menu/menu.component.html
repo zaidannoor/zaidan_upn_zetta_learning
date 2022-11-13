@@ -6,10 +6,10 @@
         </div>
         <div class="card-body">
             <h4>{{ item.name }}</h4>
-            <p>{{ item.price }}</p>   
+            <p>{{ item.price }}</p>  
         </div>
         <div class="card-button">
-            <button class="button-detail">Detail item</button>
+            <a href="/detail/{{ item.id }}" class="button-detail">Detail item</a>
             <button class="button-payment" (click)="onAddItem.emit(item)">Add to payment</button>
         </div>
     </div>
