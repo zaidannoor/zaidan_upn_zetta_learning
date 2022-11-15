@@ -69,7 +69,6 @@ export class CashierService {
   constructor() {
     console.log(this.items.asObservable())
     console.log(this.items$)
-
    }
 
   additem(item: Item) {

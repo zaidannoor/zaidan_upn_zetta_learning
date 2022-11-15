@@ -6,11 +6,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Cashier Application';
-  dataPayment: { title: string; img:string; price: number; }[] = [];
+  title = 'User Management';
+  // dataPayment: { title: string; img:string; price: number; }[] = [];
   
-  receiveMenu($event : any) { 
-    this.dataPayment = $event;
-    console.log(this.dataPayment)
-  }
+  // receiveMenu($event : any) { 
+  //   this.dataPayment = $event;
+  //   console.log(this.dataPayment)
+  // }
 }
