@@ -7,10 +7,5 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
   title = 'User Management';
-  // dataPayment: { title: string; img:string; price: number; }[] = [];
   
-  // receiveMenu($event : any) { 
-  //   this.dataPayment = $event;
-  //   console.log(this.dataPayment)
-  // }
 }
