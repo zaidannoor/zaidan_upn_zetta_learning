@@ -15,7 +15,7 @@ export interface User {
   providedIn: 'root'
 })
 export class UserService {
-  private users : BehaviorSubject<User[]> = new BehaviorSubject<User[]>([
+  private users: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([
     {
       id: 1,
       name: "Zaidan Noor",
@@ -23,7 +23,7 @@ export class UserService {
       gender: "male",
       email: "nkgnaeo@gmail.com",
       position: "CTO",
-      isMarried: "yes",
+      isMarried: "already",
       addresses: {
         address: "Jatiasih",
         zipCode: 14421,
@@ -38,7 +38,7 @@ export class UserService {
       gender: "male",
       email: "nkgnaeo@gmail.com",
       position: "CTO",
-      isMarried: "yes",
+      isMarried: "not",
       addresses: {
         address: "Jatiasih",
         zipCode: 14421,
@@ -50,9 +50,7 @@ export class UserService {
 
   public users$ = this.users.asObservable();
 
-  constructor() { 
-    console.log(this.users.asObservable())
-    console.log(this.users$)
-    console.log(this.users)
+  constructor() {
+    
   }
 }
