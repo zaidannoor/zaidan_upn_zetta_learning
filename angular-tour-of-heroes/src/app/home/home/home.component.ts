@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   public users: Observable<User[]>;
 
   constructor(private userservice: UserService) { 
-    this.users = userservice.users$
+    this.users = this.userservice.users$
     console.log(this.users)
    }
 
