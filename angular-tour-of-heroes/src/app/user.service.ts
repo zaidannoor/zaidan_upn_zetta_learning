@@ -8,7 +8,7 @@ export interface User {
   email: string;
   position: string;
   isMarried: string;
-  addresses: object;
+  addresses: any;
 }
 
 @Injectable({

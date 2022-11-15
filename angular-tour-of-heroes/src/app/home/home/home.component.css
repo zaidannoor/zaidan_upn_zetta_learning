@@ -1,0 +1,18 @@
+.user-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card{
+    text-indent: 10px;
+    border-radius: 10px;
+    border-top: 5px solid black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5),
+    -2px -2px 3px rgba(0, 0, 0, .5);
+}
+
+.card-body{
+    padding: 5px;
+    border-bottom:1px solid black ;
+}
