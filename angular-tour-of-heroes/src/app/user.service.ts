@@ -15,7 +15,7 @@ export interface User {
   providedIn: 'root'
 })
 export class UserService {
-  private users: BehaviorSubject<User[]> = new BehaviorSubject<User[]>([
+  private users: User[] = ([
     {
       id: 1,
       name: "Zaidan Noor",
@@ -48,9 +48,17 @@ export class UserService {
     },
   ])
 
-  public users$ = this.users.asObservable();
+  // public users$ = this.users.asObservable();
 
   constructor() {
     
+  }
+
+  getUser(){
+    return this.users;
+  }
+
+  addData(parameter: any) {
+    this.users.push(parameter);
   }
 }

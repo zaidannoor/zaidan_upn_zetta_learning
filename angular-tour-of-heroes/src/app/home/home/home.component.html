@@ -1,7 +1,6 @@
 <p>Ini Halaman Home</p>
-<!-- <p>{{ users[0].name }}</p> -->
 <div class="user-list">
-    <div class="card" *ngFor="let user of users | async">
+    <div class="card" *ngFor="let user of users">
         <div class="card-body">
             <h2>{{ user.name }}, {{ user.age }} years old, {{ user.gender }}</h2>
             <h3>{{ user.position }}</h3>

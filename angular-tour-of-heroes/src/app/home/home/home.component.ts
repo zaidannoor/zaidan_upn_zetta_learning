@@ -9,10 +9,10 @@ import { User } from 'src/app/user.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public users: Observable<User[]>;
+  public users: User[];
 
   constructor(private userservice: UserService) { 
-    this.users = this.userservice.users$
+    this.users = this.userservice.getUser();
     console.log(this.users)
    }
 
