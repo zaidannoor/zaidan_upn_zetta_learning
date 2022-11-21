@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path :'cashier',
+    path :'',
     loadChildren:()=>import('./cashier/cashier.module').then(m=> m.CashierModule),
   },
   {
